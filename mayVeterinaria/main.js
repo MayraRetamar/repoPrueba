@@ -87,14 +87,14 @@ function cargarCliente(elemento, arr, listaMascota) {
     var nombre = datos[1];
     var telefono = Number(datos[2]);
     var visitas = Number(datos[3]);
-    var arrayMascota = listaMascota;
+    var arrayMascota = animal;
     var nuevoCliente = new Cliente(id, nombre, telefono, visitas, listaMascota);
     arr.push(nuevoCliente);
     return arr;
 }
 var datosClientes = new GestorDeArchivos("cliente.txt");
 console.log(datosClientes);
-var listaMascota = animal;
+var arrayMascota = animal;
 var listaPersonas = [];
 for (var i = 0; i < datosClientes.getArregloString().length; i++) {
     cargarCliente(datosClientes.getArregloString()[i], listaPersonas, animal);
